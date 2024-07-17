@@ -66,12 +66,12 @@ with col1:
     st.image("images/PSX_20221013_021420.jpg")
     st.image("images/PSX_20221013_021420.jpg")
 
-with col1:
+with col2:
     st.image("images/PSX_20221013_021420.jpg")
     st.image("images/PSX_20221013_021420.jpg")
     st.image("images/PSX_20221013_021420.jpg")
 
-with col1:
+with col3:
     st.image("images/PSX_20221013_021420.jpg")
     st.image("images/PSX_20221013_021420.jpg")
     st.image("images/PSX_20221013_021420.jpg")
@@ -79,53 +79,6 @@ with col1:
 st.title(" ")
 st.title("CONTACT")
 
-# Supported languages
-languages = {
-    'English': 'en',
-    'Spanish': 'es',
-    'French': 'fr',
-    'German': 'de',
-}
-
-def set_language(language):
-    if language == 'en':
-        st.session_state.language = 'en'
-    elif language == 'es':
-        st.session_state.language = 'es'
-    elif language == 'fr':
-        st.session_state.language = 'fr'
-    elif language == 'de':
-        st.session_state.language = 'de'
-
-# Set language based on user selection or default to English
-if 'language' not in st.session_state:
-    st.session_state.language = 'en'
-
-# Language selection dropdown
-selected_language = st.sidebar.selectbox(
-    "Select language:",
-    list(languages.keys()),
-    index=list(languages.values()).index(st.session_state.language)
-)
-
-set_language(languages[selected_language])
-
-# Conditional content based on selected language
-if st.session_state.language == 'en':
-    st.title("English Website")
-    st.write("This is the content in English.")
-
-elif st.session_state.language == 'es':
-    st.title("Sitio web en español")
-    st.write("Este es el contenido en español.")
-
-elif st.session_state.language == 'fr':
-    st.title("Site Web en français")
-    st.write("Voici le contenu en français.")
-
-elif st.session_state.language == 'de':
-    st.title("Website auf Deutsch")
-    st.write("Dies ist der Inhalt auf Deutsch.")
 st.title("For any inquiries, please contact me")
 st.subheader("Visit: vazhlav.com")
 
