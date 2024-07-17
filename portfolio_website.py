@@ -17,7 +17,7 @@ with col2:
     st.image("images/PSX_20221013_021420.jpg")
 
 st.title(" ")   #blank space vertical
-#secret sauce of logic
+
 persona = """Escultor Mexicano
 Hola, mi nombre es Vazhlav Lastra Flores soy artista plástico, escultor y creativo multidisciplinario.
 Artes plásticas, diseño industrial, upcycling, interiores, hasta medios digitales por mencionar algunos, 
@@ -30,8 +30,6 @@ if st.button("ASK", use_container_width=400): #use_container_width=100 ajusta el
     prompt = persona + user_question
     response = model.generate_content(prompt)
     st.write(response.text)
-
-#secret sauce
 
 st.title(" ")   #blank space vertical
 
